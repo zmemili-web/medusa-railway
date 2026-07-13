@@ -28,5 +28,22 @@ module.exports = defineConfig({
   },
   modules: [
     { key: "api_key", resolve: "@medusajs/medusa/api-key" },
+    {
+      resolve: "@medusajs/medusa/payment",
+      options: {
+        providers: [
+          {
+            resolve: "./src/modules/iyzico",
+            id: "iyzico",
+            options: {
+              apiKey: process.env.IYZICO_API_KEY,
+              secretKey: process.env.IYZICO_SECRET_KEY,
+              baseUrl: process.env.IYZICO_BASE_URL || "https://sandbox-api.iyzipay.com",
+              callbackUrl: process.env.IYZICO_CALLBACK_URL || "https://kulpix.com/odeme/sonuc",
+            },
+          },
+        ],
+      },
+    },
   ],
 })
