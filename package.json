@@ -14,6 +14,7 @@
     "@medusajs/framework": "2.13.6",
     "@medusajs/medusa": "2.13.6",
     "awilix": "^8.0.1",
+    "iyzipay": "^2.0.64",
     "pg": "^8.13.0"
   },
   "devDependencies": {
