@@ -5,6 +5,12 @@ WORKDIR /app
 RUN apk add --no-cache python3 make g++ libc6-compat \
     && corepack enable
 
+# npm registry rate-limit (E429) direncini artir
+RUN npm config set fetch-retries 6 \
+    && npm config set fetch-retry-mintimeout 15000 \
+    && npm config set fetch-retry-maxtimeout 120000 \
+    && npm config set fetch-retry-factor 3
+
 COPY package.json ./
 COPY tsconfig.json ./
 COPY medusa-config.ts ./
