@@ -192,6 +192,79 @@ export default async function orderPlacedHandler({
     logger.info(
       `[order-placed] Onay e-postası gönderildi: ${order.email} (${displayId})`
     )
+
+    // --- Satıcıya yeni sipariş bildirimi ---
+    const orderDate = esc(
+      new Date(order.created_at || Date.now()).toLocaleString("tr-TR")
+    )
+    const merchantHtml = `<!doctype html>
+<html lang="tr">
+  <body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:24px 0;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:#ffffff;border:1px solid #eeeeee;">
+            <tr>
+              <td style="background:#0D1F2D;padding:20px 32px;">
+                <span style="color:#ffffff;font-size:18px;font-weight:700;">Yeni sipariş geldi</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 32px 8px 32px;">
+                <p style="margin:0 0 6px 0;font-size:14px;color:#111111;"><strong>Sipariş:</strong> ${esc(
+                  displayId
+                )}</p>
+                <p style="margin:0 0 6px 0;font-size:14px;color:#111111;"><strong>Müşteri:</strong> ${esc(
+                  order.email
+                )}</p>
+                <p style="margin:0;font-size:14px;color:#111111;"><strong>Tarih:</strong> ${orderDate}</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 32px 0 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  ${rows}
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:12px 32px 16px 32px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:2px solid #111111;">
+                  <tr><td colspan="2" style="height:8px;"></td></tr>
+                  ${totalsRow("Ara toplam", tl(itemsSubtotal))}
+                  ${totalsRow("Kargo", tl(order.shipping_total))}
+                  ${totalsRow("Toplam", tl(order.total), true)}
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 32px 24px 32px;">
+                <h2 style="margin:0 0 8px 0;font-size:15px;color:#111111;font-weight:700;">Teslimat adresi</h2>
+                <p style="margin:0;font-size:14px;color:#555555;line-height:1.6;">${addressHtml}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>`
+
+    const { error: merchantError } = await resend.emails.send({
+      from: "Kulpix <info@kulpix.com>",
+      to: ["info@kulpix.com"],
+      replyTo: order.email,
+      subject: `Yeni sipariş - ${displayId}`,
+      html: merchantHtml,
+    })
+
+    if (merchantError) {
+      logger.error(
+        `[order-placed] Satıcı bildirimi hatası: ${JSON.stringify(merchantError)}`
+      )
+    } else {
+      logger.info(`[order-placed] Satıcı bildirimi gönderildi (${displayId})`)
+    }
   } catch (e: any) {
     // Mail hatası siparişi bloklamaz; sipariş yine tamamlanır.
     logger.error(`[order-placed] E-posta gönderilemedi: ${e?.message || e}`)
