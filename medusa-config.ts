@@ -68,5 +68,14 @@ module.exports = defineConfig({
         ],
       },
     },
+    {
+      resolve: "@medusajs/medusa/fulfillment",
+      options: {
+        providers: [
+          { resolve: "@medusajs/medusa/fulfillment-manual", id: "manual" },
+          { resolve: "./src/modules/desi-shipping", id: "desi" },
+        ],
+      },
+    },
   ],
 })
