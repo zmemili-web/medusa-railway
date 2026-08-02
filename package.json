@@ -15,7 +15,8 @@
     "@medusajs/medusa": "2.13.6",
     "awilix": "^8.0.1",
     "iyzipay": "^2.0.64",
-    "pg": "^8.13.0"
+    "pg": "^8.13.0",
+    "resend": "^4.0.1"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.13.6",
