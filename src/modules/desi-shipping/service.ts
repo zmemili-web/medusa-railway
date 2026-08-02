@@ -122,25 +122,6 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
   async createReturnFulfillment(fulfillment: any): Promise<any> {
     return { data: {}, labels: [] }
   }
-
-  async getFulfillmentDocuments(data: any): Promise<any[]> {
-    return []
-  }
-
-  async getReturnDocuments(data: any): Promise<any[]> {
-    return []
-  }
-
-  async getShipmentDocuments(data: any): Promise<any[]> {
-    return []
-  }
-
-  async retrieveDocuments(
-    fulfillmentData: any,
-    documentType: any
-  ): Promise<any> {
-    return {}
-  }
 }
 
 export default DesiShippingProviderService
