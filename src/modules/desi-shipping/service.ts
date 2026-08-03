@@ -65,6 +65,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
   ): Promise<any> {
     const items: any[] = context?.items || []
 
+    // variant ağırlıklarını topla
     const weightById: Record<string, number> = {}
     const variantIds = Array.from(
       new Set(items.map((i) => i?.variant_id).filter(Boolean))
@@ -81,10 +82,12 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
         for (const v of variants || []) {
           weightById[v.id] = Number(v.weight) || 0
         }
-      } catch (e) {}
+      } catch (e) {
+        // ağırlık çekilemezse item üstündeki veriye düş
+      }
     }
 
-    // weight gram cinsinden saklanıyor; kg = gram / 1000
+    // weight gram cinsinden saklanıyor (Medusa integer alan); kg = gram / 1000
     let totalGrams = 0
     for (const it of items) {
       const w =
@@ -98,11 +101,13 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
     const totalKg = totalGrams / 1000
 
     return {
-      calculated_amount: desiPrice(totalKg),
+      // KDV dahil tutar, küsuratsız olması için yukarı yuvarlanır (tam TL)
+      calculated_amount: Math.ceil(desiPrice(totalKg)),
       is_calculated_price_tax_inclusive: true,
     }
   }
 
+  // --- Zorunlu stub'lar (manuel operasyon; etiket/entegrasyon yok) ---
   async createFulfillment(
     data: any,
     items: any,
