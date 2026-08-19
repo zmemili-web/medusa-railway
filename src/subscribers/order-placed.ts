@@ -59,6 +59,8 @@ export default async function orderPlacedHandler({
       (s: number, it: any) => s + toNum(it.unit_price) * toNum(it.quantity),
       0
     )
+    const itemsNet = itemsSubtotal / 1.2
+    const itemsVat = itemsSubtotal - itemsNet
 
     const rows = items
       .map((it: any) => {
@@ -147,9 +149,10 @@ export default async function orderPlacedHandler({
               <td style="padding:12px 32px 16px 32px;">
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:2px solid #111111;">
                   <tr><td colspan="2" style="height:8px;"></td></tr>
-                  ${totalsRow("Ara toplam", tl(itemsSubtotal))}
-                  ${totalsRow("Kargo", tl(order.shipping_total))}
+                  ${totalsRow("KDV hariç fiyat", tl(itemsNet))}
+                  ${totalsRow("KDV tutarı (%20)", tl(itemsVat))}
                   ${discount > 0 ? totalsRow("İndirim", "-" + tl(discount)) : ""}
+                  ${totalsRow("Kargo ücreti (KDV dahil)", tl(order.shipping_total))}
                   ${totalsRow("Toplam", tl(order.total), true)}
                 </table>
               </td>
@@ -231,8 +234,9 @@ export default async function orderPlacedHandler({
               <td style="padding:12px 32px 16px 32px;">
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:2px solid #111111;">
                   <tr><td colspan="2" style="height:8px;"></td></tr>
-                  ${totalsRow("Ara toplam", tl(itemsSubtotal))}
-                  ${totalsRow("Kargo", tl(order.shipping_total))}
+                  ${totalsRow("KDV hariç fiyat", tl(itemsNet))}
+                  ${totalsRow("KDV tutarı (%20)", tl(itemsVat))}
+                  ${totalsRow("Kargo ücreti (KDV dahil)", tl(order.shipping_total))}
                   ${totalsRow("Toplam", tl(order.total), true)}
                 </table>
               </td>
