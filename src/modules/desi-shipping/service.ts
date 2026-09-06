@@ -25,7 +25,7 @@ function desiPrice(totalKg: number): number {
 
 // --- Ucretsiz kargo esigi -------------------------------------------------
 // Esik SADECE bu kategorilerdeki kalemlerin toplamina bakar. Ahsap boya haric.
-const FREE_SHIPPING_CATEGORIES = ["Kulp", "Kapi Kolu", "Kapı Kolu"]
+const FREE_SHIPPING_HANDLE_PREFIXES = ["kulpix-kulp-", "kulpix-kol-"]
 
 // Esik FREE_SHIPPING_THRESHOLD ortam degiskeninden okunur (KDV DAHIL tutar).
 // Degisken tanimli degilse kural CALISMAZ, kargo eskisi gibi hesaplanir.
@@ -96,8 +96,6 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
 
     // variant ağırlıklarını topla
     const weightById: Record<string, number> = {}
-    const categoryNamesById: Record<string, string[]> = {}
-    const catDiag: any = {}
     const variantIds = Array.from(
       new Set(items.map((i) => i?.variant_id).filter(Boolean))
     )
@@ -119,44 +117,23 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
     }
 
     // --- Ucretsiz kargo esigi kontrolu ---
-    // Sadece Kulp + Kapi Kolu kalemlerinin KDV DAHIL toplamina bakilir.
+    // Kategori SORGUSU KULLANILMIYOR. Medusa container'i bu modulde query'yi
+    // cozumleyemiyor, o yuzden sepet kaleminde HAZIR gelen product_handle
+    // uzerinden ayrim yapiyoruz. Katalogda dogrulandi (06.09.2026):
+    //   kulpix-kulp-*  -> 24/24 Kulp urunu
+    //   kulpix-kol-*   ->   8/8 Kapi Kolu urunu
+    //   Ahsap boyalarin hicbiri "kulpix-" ile baslamiyor (73 urun), cakisma yok.
+    // YENI URUN EKLERKEN: kulp icin handle "kulpix-kulp-", kapi kolu icin
+    // "kulpix-kol-" ile baslamali, yoksa urun kampanyaya dahil olmaz.
     const threshold = freeShippingThreshold()
     if (threshold !== null) {
-      // product_id sepet kaleminde hazir geliyor; varyant sorgusuna gerek yok.
-      const productIds: string[] = []
-      for (const it of items) {
-        const pid = String(it?.product_id || it?.variant?.product_id || "")
-        if (pid && !productIds.includes(pid)) productIds.push(pid)
-      }
-
-      const catsByProduct: Record<string, string[]> = {}
-      if (productIds.length) {
-        try {
-          const query = resolveQuery(this.container_ as any)
-          if (!query) throw new Error("query cozumlenemedi")
-          const { data: products } = await query.graph({
-            entity: "product",
-            fields: ["id", "categories.name"],
-            filters: { id: productIds },
-          })
-          for (const p of products || []) {
-            catsByProduct[String(p.id)] = ((p as any)?.categories || [])
-              .map((c: any) => String(c?.name || ""))
-              .filter(Boolean)
-          }
-        } catch (e: any) {
-          catDiag.hata = String(e?.message || e).slice(0, 200)
-        }
-      }
-      catDiag.urunSayisi = productIds.length
-      catDiag.kategoriEslesen = Object.keys(catsByProduct).length
-
       let qualifyingTotal = 0
       const diag: any[] = []
       for (const it of items) {
-        const pid = String(it?.product_id || it?.variant?.product_id || "")
-        const cats = catsByProduct[pid] || []
-        const qualifies = cats.some((c) => FREE_SHIPPING_CATEGORIES.includes(c))
+        const handle = String(it?.product_handle || "").toLowerCase()
+        const qualifies = FREE_SHIPPING_HANDLE_PREFIXES.some((p) =>
+          handle.startsWith(p)
+        )
         const qty = Number(it?.quantity) || 1
         // unit_price KDV DAHIL saklanir (musterinin gordugu fiyat).
         const lineTotal =
@@ -164,12 +141,12 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
             ? it.total
             : (Number(it?.unit_price) || 0) * qty
         if (qualifies) qualifyingTotal += lineTotal
-        diag.push({ cats, qualifies, qty, unit_price: it?.unit_price, lineTotal })
+        diag.push({ handle, qualifies, qty, lineTotal })
       }
 
       console.log(
         "[desi] esik kontrolu " +
-          JSON.stringify({ threshold, qualifyingTotal, catDiag, diag })
+          JSON.stringify({ threshold, qualifyingTotal, diag })
       )
 
       if (qualifyingTotal >= threshold) {
