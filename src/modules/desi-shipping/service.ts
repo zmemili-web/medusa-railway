@@ -91,14 +91,38 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
         const query = this.container_.resolve("query")
         const { data: variants } = await query.graph({
           entity: "product_variant",
-          fields: ["id", "weight", "product.categories.name"],
+          fields: ["id", "weight", "product_id"],
           filters: { id: variantIds },
         })
+        const productIdByVariant: Record<string, string> = {}
+        const productIds: string[] = []
         for (const v of variants || []) {
           weightById[v.id] = Number(v.weight) || 0
-          categoryNamesById[v.id] = ((v as any)?.product?.categories || [])
-            .map((c: any) => String(c?.name || ""))
-            .filter(Boolean)
+          categoryNamesById[v.id] = []
+          const pid = String((v as any)?.product_id || "")
+          if (pid) {
+            productIdByVariant[v.id] = pid
+            if (!productIds.includes(pid)) productIds.push(pid)
+          }
+        }
+
+        // Kategori adlarini ayri sorguda cek: product_variant uzerinden
+        // product.categories zinciri bos donuyordu.
+        if (productIds.length) {
+          const { data: products } = await query.graph({
+            entity: "product",
+            fields: ["id", "categories.name"],
+            filters: { id: productIds },
+          })
+          const catsByProduct: Record<string, string[]> = {}
+          for (const p of products || []) {
+            catsByProduct[p.id] = ((p as any)?.categories || [])
+              .map((c: any) => String(c?.name || ""))
+              .filter(Boolean)
+          }
+          for (const vid of Object.keys(productIdByVariant)) {
+            categoryNamesById[vid] = catsByProduct[productIdByVariant[vid]] || []
+          }
         }
       } catch (e) {
         // ağırlık çekilemezse item üstündeki veriye düş
