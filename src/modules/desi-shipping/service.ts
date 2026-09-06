@@ -23,6 +23,20 @@ function desiPrice(totalKg: number): number {
   return Math.round(d * 23.136 * 100) / 100
 }
 
+// --- Ucretsiz kargo esigi -------------------------------------------------
+// Esik SADECE bu kategorilerdeki kalemlerin toplamina bakar. Ahsap boya haric.
+const FREE_SHIPPING_CATEGORIES = ["Kulp", "Kapi Kolu", "Kapı Kolu"]
+
+// Esik FREE_SHIPPING_THRESHOLD ortam degiskeninden okunur (KDV DAHIL tutar).
+// Degisken tanimli degilse kural CALISMAZ, kargo eskisi gibi hesaplanir.
+// Boylece kod canliya alinsa bile davranis env girilene kadar degismez.
+function freeShippingThreshold(): number | null {
+  const raw = process.env.FREE_SHIPPING_THRESHOLD
+  if (!raw) return null
+  const n = Number(raw)
+  return Number.isFinite(n) && n > 0 ? n : null
+}
+
 class DesiShippingProviderService extends AbstractFulfillmentProviderService {
   static identifier = "desi-shipping"
 
@@ -67,6 +81,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
 
     // variant ağırlıklarını topla
     const weightById: Record<string, number> = {}
+    const categoryNamesById: Record<string, string[]> = {}
     const variantIds = Array.from(
       new Set(items.map((i) => i?.variant_id).filter(Boolean))
     )
@@ -76,14 +91,57 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
         const query = this.container_.resolve("query")
         const { data: variants } = await query.graph({
           entity: "product_variant",
-          fields: ["id", "weight"],
+          fields: ["id", "weight", "product.categories.name"],
           filters: { id: variantIds },
         })
         for (const v of variants || []) {
           weightById[v.id] = Number(v.weight) || 0
+          categoryNamesById[v.id] = ((v as any)?.product?.categories || [])
+            .map((c: any) => String(c?.name || ""))
+            .filter(Boolean)
         }
       } catch (e) {
         // ağırlık çekilemezse item üstündeki veriye düş
+      }
+    }
+
+    // --- Ucretsiz kargo esigi kontrolu ---
+    // Sadece Kulp + Kapi Kolu kalemlerinin KDV DAHIL toplamina bakilir.
+    const threshold = freeShippingThreshold()
+    if (threshold !== null) {
+      let qualifyingTotal = 0
+      const diag: any[] = []
+      for (const it of items) {
+        const cats = categoryNamesById[it?.variant_id] || []
+        const qualifies = cats.some((c) => FREE_SHIPPING_CATEGORIES.includes(c))
+        const qty = Number(it?.quantity) || 1
+        // it.total varsa KDV DAHIL satir toplamidir; yoksa unit_price * adet.
+        // Urun fiyatlari KDV dahil saklandigi icin unit_price da KDV dahildir.
+        const lineTotal =
+          typeof it?.total === "number"
+            ? it.total
+            : (Number(it?.unit_price) || 0) * qty
+        if (qualifies) qualifyingTotal += lineTotal
+        diag.push({
+          cats,
+          qualifies,
+          qty,
+          unit_price: it?.unit_price,
+          total: it?.total,
+          subtotal: it?.subtotal,
+          lineTotal,
+        })
+      }
+      // Gecici teshis logu: birim ve alan secimini dogrulamak icin.
+      console.log(
+        "[desi] esik kontrolu " +
+          JSON.stringify({ threshold, qualifyingTotal, diag })
+      )
+      if (qualifyingTotal >= threshold) {
+        return {
+          calculated_amount: 0,
+          is_calculated_price_tax_inclusive: true,
+        }
       }
     }
 
