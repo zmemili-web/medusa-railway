@@ -95,74 +95,11 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
           fields: ["id", "weight", "product_id"],
           filters: { id: variantIds },
         })
-        catDiag.varyantAnahtarlari = Object.keys((variants || [])[0] || {})
-        catDiag.varyantSayisi = (variants || []).length
-        const productIdByVariant: Record<string, string> = {}
-        const productIds: string[] = []
         for (const v of variants || []) {
           weightById[v.id] = Number(v.weight) || 0
-          categoryNamesById[v.id] = []
-          const pid = String((v as any)?.product_id || "")
-          if (pid) {
-            productIdByVariant[v.id] = pid
-            if (!productIds.includes(pid)) productIds.push(pid)
-          }
-        }
-
-        // Kategori adlari: once product uzerinden, olmazsa product_category
-        // uzerinden dene. Hangi yolun calistigini catDiag ile raporla.
-        catDiag.productIdSayisi = productIds.length
-        if (productIds.length) {
-          const catsByProduct: Record<string, string[]> = {}
-          try {
-            const { data: products } = await query.graph({
-              entity: "product",
-              fields: ["id", "categories.name"],
-              filters: { id: productIds },
-            })
-            catDiag.yol = "product"
-            catDiag.donenUrun = (products || []).length
-            catDiag.ilkAnahtarlar = Object.keys((products || [])[0] || {})
-            for (const p of products || []) {
-              catsByProduct[p.id] = ((p as any)?.categories || [])
-                .map((c: any) => String(c?.name || ""))
-                .filter(Boolean)
-            }
-          } catch (e: any) {
-            catDiag.productHatasi = String(e?.message || e).slice(0, 200)
-          }
-
-          const bulundu = Object.values(catsByProduct).some((a) => a.length)
-          if (!bulundu) {
-            try {
-              const { data: cats } = await query.graph({
-                entity: "product_category",
-                fields: ["id", "name", "products.id"],
-              })
-              catDiag.yol = "product_category"
-              catDiag.donenKategori = (cats || []).length
-              for (const c of cats || []) {
-                const nm = String((c as any)?.name || "")
-                for (const p of ((c as any)?.products || [])) {
-                  const pid = String(p?.id || "")
-                  if (!pid || !productIds.includes(pid)) continue
-                  catsByProduct[pid] = catsByProduct[pid] || []
-                  if (nm && !catsByProduct[pid].includes(nm)) {
-                    catsByProduct[pid].push(nm)
-                  }
-                }
-              }
-            } catch (e: any) {
-              catDiag.kategoriHatasi = String(e?.message || e).slice(0, 200)
-            }
-          }
-
-          for (const vid of Object.keys(productIdByVariant)) {
-            categoryNamesById[vid] = catsByProduct[productIdByVariant[vid]] || []
-          }
         }
       } catch (e) {
-        // ağırlık çekilemezse item üstündeki veriye düş
+        // agirlik cekilemezse item ustundeki veriye dus
       }
     }
 
@@ -170,37 +107,55 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
     // Sadece Kulp + Kapi Kolu kalemlerinin KDV DAHIL toplamina bakilir.
     const threshold = freeShippingThreshold()
     if (threshold !== null) {
+      // product_id sepet kaleminde hazir geliyor; varyant sorgusuna gerek yok.
+      const productIds: string[] = []
+      for (const it of items) {
+        const pid = String(it?.product_id || it?.variant?.product_id || "")
+        if (pid && !productIds.includes(pid)) productIds.push(pid)
+      }
+
+      const catsByProduct: Record<string, string[]> = {}
+      if (productIds.length) {
+        try {
+          const query = this.container_.resolve("query")
+          const { data: products } = await query.graph({
+            entity: "product",
+            fields: ["id", "categories.name"],
+            filters: { id: productIds },
+          })
+          for (const p of products || []) {
+            catsByProduct[String(p.id)] = ((p as any)?.categories || [])
+              .map((c: any) => String(c?.name || ""))
+              .filter(Boolean)
+          }
+        } catch (e: any) {
+          catDiag.hata = String(e?.message || e).slice(0, 200)
+        }
+      }
+      catDiag.urunSayisi = productIds.length
+      catDiag.kategoriEslesen = Object.keys(catsByProduct).length
+
       let qualifyingTotal = 0
       const diag: any[] = []
       for (const it of items) {
-        const cats = categoryNamesById[it?.variant_id] || []
+        const pid = String(it?.product_id || it?.variant?.product_id || "")
+        const cats = catsByProduct[pid] || []
         const qualifies = cats.some((c) => FREE_SHIPPING_CATEGORIES.includes(c))
         const qty = Number(it?.quantity) || 1
-        // it.total varsa KDV DAHIL satir toplamidir; yoksa unit_price * adet.
-        // Urun fiyatlari KDV dahil saklandigi icin unit_price da KDV dahildir.
+        // unit_price KDV DAHIL saklanir (musterinin gordugu fiyat).
         const lineTotal =
           typeof it?.total === "number"
             ? it.total
             : (Number(it?.unit_price) || 0) * qty
         if (qualifies) qualifyingTotal += lineTotal
-        diag.push({
-          itemKeys: Object.keys(it || {}),
-          it_product_id: it?.product_id,
-          it_variant_product_id: it?.variant?.product_id,
-          cats,
-          qualifies,
-          qty,
-          unit_price: it?.unit_price,
-          total: it?.total,
-          subtotal: it?.subtotal,
-          lineTotal,
-        })
+        diag.push({ cats, qualifies, qty, unit_price: it?.unit_price, lineTotal })
       }
-      // Gecici teshis logu: birim ve alan secimini dogrulamak icin.
+
       console.log(
         "[desi] esik kontrolu " +
           JSON.stringify({ threshold, qualifyingTotal, catDiag, diag })
       )
+
       if (qualifyingTotal >= threshold) {
         return {
           calculated_amount: 0,
