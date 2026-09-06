@@ -95,6 +95,8 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
           fields: ["id", "weight", "product_id"],
           filters: { id: variantIds },
         })
+        catDiag.varyantAnahtarlari = Object.keys((variants || [])[0] || {})
+        catDiag.varyantSayisi = (variants || []).length
         const productIdByVariant: Record<string, string> = {}
         const productIds: string[] = []
         for (const v of variants || []) {
@@ -109,6 +111,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
 
         // Kategori adlari: once product uzerinden, olmazsa product_category
         // uzerinden dene. Hangi yolun calistigini catDiag ile raporla.
+        catDiag.productIdSayisi = productIds.length
         if (productIds.length) {
           const catsByProduct: Record<string, string[]> = {}
           try {
@@ -181,6 +184,9 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
             : (Number(it?.unit_price) || 0) * qty
         if (qualifies) qualifyingTotal += lineTotal
         diag.push({
+          itemKeys: Object.keys(it || {}),
+          it_product_id: it?.product_id,
+          it_variant_product_id: it?.variant?.product_id,
           cats,
           qualifies,
           qty,
