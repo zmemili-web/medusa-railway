@@ -82,6 +82,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
     // variant ağırlıklarını topla
     const weightById: Record<string, number> = {}
     const categoryNamesById: Record<string, string[]> = {}
+    const catDiag: any = {}
     const variantIds = Array.from(
       new Set(items.map((i) => i?.variant_id).filter(Boolean))
     )
@@ -106,20 +107,53 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
           }
         }
 
-        // Kategori adlarini ayri sorguda cek: product_variant uzerinden
-        // product.categories zinciri bos donuyordu.
+        // Kategori adlari: once product uzerinden, olmazsa product_category
+        // uzerinden dene. Hangi yolun calistigini catDiag ile raporla.
         if (productIds.length) {
-          const { data: products } = await query.graph({
-            entity: "product",
-            fields: ["id", "categories.name"],
-            filters: { id: productIds },
-          })
           const catsByProduct: Record<string, string[]> = {}
-          for (const p of products || []) {
-            catsByProduct[p.id] = ((p as any)?.categories || [])
-              .map((c: any) => String(c?.name || ""))
-              .filter(Boolean)
+          try {
+            const { data: products } = await query.graph({
+              entity: "product",
+              fields: ["id", "categories.name"],
+              filters: { id: productIds },
+            })
+            catDiag.yol = "product"
+            catDiag.donenUrun = (products || []).length
+            catDiag.ilkAnahtarlar = Object.keys((products || [])[0] || {})
+            for (const p of products || []) {
+              catsByProduct[p.id] = ((p as any)?.categories || [])
+                .map((c: any) => String(c?.name || ""))
+                .filter(Boolean)
+            }
+          } catch (e: any) {
+            catDiag.productHatasi = String(e?.message || e).slice(0, 200)
           }
+
+          const bulundu = Object.values(catsByProduct).some((a) => a.length)
+          if (!bulundu) {
+            try {
+              const { data: cats } = await query.graph({
+                entity: "product_category",
+                fields: ["id", "name", "products.id"],
+              })
+              catDiag.yol = "product_category"
+              catDiag.donenKategori = (cats || []).length
+              for (const c of cats || []) {
+                const nm = String((c as any)?.name || "")
+                for (const p of ((c as any)?.products || [])) {
+                  const pid = String(p?.id || "")
+                  if (!pid || !productIds.includes(pid)) continue
+                  catsByProduct[pid] = catsByProduct[pid] || []
+                  if (nm && !catsByProduct[pid].includes(nm)) {
+                    catsByProduct[pid].push(nm)
+                  }
+                }
+              }
+            } catch (e: any) {
+              catDiag.kategoriHatasi = String(e?.message || e).slice(0, 200)
+            }
+          }
+
           for (const vid of Object.keys(productIdByVariant)) {
             categoryNamesById[vid] = catsByProduct[productIdByVariant[vid]] || []
           }
@@ -159,7 +193,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
       // Gecici teshis logu: birim ve alan secimini dogrulamak icin.
       console.log(
         "[desi] esik kontrolu " +
-          JSON.stringify({ threshold, qualifyingTotal, diag })
+          JSON.stringify({ threshold, qualifyingTotal, catDiag, diag })
       )
       if (qualifyingTotal >= threshold) {
         return {
