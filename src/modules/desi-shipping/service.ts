@@ -30,6 +30,21 @@ const FREE_SHIPPING_CATEGORIES = ["Kulp", "Kapi Kolu", "Kapı Kolu"]
 // Esik FREE_SHIPPING_THRESHOLD ortam degiskeninden okunur (KDV DAHIL tutar).
 // Degisken tanimli degilse kural CALISMAZ, kargo eskisi gibi hesaplanir.
 // Boylece kod canliya alinsa bile davranis env girilene kadar degismez.
+// Container Medusa'da Awilix proxy'si olabilir: .resolve("query") her zaman
+// calismiyor ("Could not resolve 'resolve'"). Once dogrudan ozellik, sonra resolve.
+function resolveQuery(container: any): any {
+  if (!container) return null
+  if (container.query) return container.query
+  if (typeof container.resolve === "function") {
+    try {
+      return container.resolve("query")
+    } catch (e) {
+      return null
+    }
+  }
+  return null
+}
+
 function freeShippingThreshold(): number | null {
   const raw = process.env.FREE_SHIPPING_THRESHOLD
   if (!raw) return null
@@ -89,7 +104,7 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
 
     if (variantIds.length) {
       try {
-        const query = this.container_.resolve("query")
+        const query = resolveQuery(this.container_ as any)
         const { data: variants } = await query.graph({
           entity: "product_variant",
           fields: ["id", "weight", "product_id"],
@@ -117,7 +132,8 @@ class DesiShippingProviderService extends AbstractFulfillmentProviderService {
       const catsByProduct: Record<string, string[]> = {}
       if (productIds.length) {
         try {
-          const query = this.container_.resolve("query")
+          const query = resolveQuery(this.container_ as any)
+          if (!query) throw new Error("query cozumlenemedi")
           const { data: products } = await query.graph({
             entity: "product",
             fields: ["id", "categories.name"],
