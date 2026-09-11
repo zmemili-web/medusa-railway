@@ -1,6 +1,7 @@
 import { ExecArgs } from "@medusajs/framework/types"
 import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
 import {
+  deleteProductVariantsWorkflow,
   createProductVariantsWorkflow,
   updateProductsWorkflow,
 } from "@medusajs/medusa/core-flows"
@@ -24,6 +25,8 @@ import veri from "./boya-renkleri.json"
 
 type RenkKaydi = { ad: string; swatch: string; buyuk: string }
 type UrunKaydi = { urun: string; renkler: RenkKaydi[] }
+
+const JENERIK = new Set(["TUMRENKLER", "RENKLI", "TUMRENK"])
 
 const RENK_BASLIK = /renk|color/i
 const AMBALAJ_BASLIK = /ambalaj|boy|\u00f6l\u00e7\u00fc|hacim|litre/i
@@ -291,6 +294,73 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
       )
     }
   }
+    // 4) Jenerik renk degerlerini temizle ("Tum Renkler", "Renkli")
+    // Sadece BOYA_TEMIZLE=1 verildiginde calisir.
+    if (process.env.BOYA_TEMIZLE === "1") {
+      const { data: guncel } = await query.graph({
+        entity: "product",
+        fields: [
+          "id",
+          "options.id",
+          "options.title",
+          "options.values.value",
+          "variants.id",
+          "variants.title",
+          "variants.options.value",
+          "variants.options.option_id",
+        ],
+        filters: { handle: kayit.urun },
+      })
+      const u2 = guncel?.[0]
+      if (u2) {
+        const rOpt = (u2.options || []).find((o: any) =>
+          RENK_BASLIK.test(o.title || "")
+        )
+        if (rOpt) {
+          const jenerikler = (rOpt.values || [])
+            .map((x: any) => String(x.value))
+            .filter((x: string) => JENERIK.has(esle(x)))
+
+          if (jenerikler.length) {
+            const jenSet = new Set(jenerikler.map((x: string) => esle(x)))
+            const silinecek = (u2.variants || []).filter((vr: any) => {
+              const rd = (vr.options || []).find(
+                (o: any) => o.option_id === rOpt.id
+              )?.value
+              return rd && jenSet.has(esle(rd))
+            })
+            const kalan = (u2.variants || []).length - silinecek.length
+
+            if (silinecek.length && kalan > 0) {
+              await deleteProductVariantsWorkflow(container).run({
+                input: { ids: silinecek.map((x: any) => x.id) },
+              })
+              const yeniDegerler = (rOpt.values || [])
+                .map((x: any) => String(x.value))
+                .filter((x: string) => !jenSet.has(esle(x)))
+              const tumO = (u2.options || []).map((o: any) => ({
+                title: o.title,
+                values:
+                  o.id === rOpt.id
+                    ? yeniDegerler
+                    : (o.values || []).map((x: any) => String(x.value)),
+              }))
+              await updateProductsWorkflow(container).run({
+                input: { selector: { id: u2.id }, update: { options: tumO } },
+              })
+              logger.info(
+                `[boya-renk] ${kayit.urun}: ${silinecek.length} jenerik varyant silindi (${jenerikler.join(", ")})`
+              )
+            } else if (silinecek.length) {
+              logger.warn(
+                `[boya-renk] ${kayit.urun}: jenerik silinmedi, geriye varyant kalmiyor`
+              )
+            }
+          }
+        }
+      }
+    }
+
 
   logger.info(
     `[boya-renk] BITTI. Yeni renk: ${toplamYeniRenk}, yeni varyant: ${toplamYeniVaryant}, yuklenen gorsel: ${toplamGorsel}`
