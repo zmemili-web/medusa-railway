@@ -293,7 +293,6 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
         `[boya-renk] ${kayit.urun}: ${parca.length} varyant olusturuldu (${i + parca.length}/${yeniVaryantlar.length})`
       )
     }
-  }
     // 4) Jenerik renk degerlerini temizle ("Tum Renkler", "Renkli")
     // Sadece BOYA_TEMIZLE=1 verildiginde calisir.
     if (process.env.BOYA_TEMIZLE === "1") {
@@ -360,6 +359,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
         }
       }
     }
+  }
 
 
   logger.info(
