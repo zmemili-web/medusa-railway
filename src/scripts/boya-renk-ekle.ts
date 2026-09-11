@@ -47,10 +47,13 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
   const query = container.resolve(ContainerRegistrationKeys.QUERY)
   const fileModule = container.resolve(Modules.FILE)
 
-  const kuru = args.includes("--kuru")
-  const hepsi = args.includes("--hepsi")
-  const tekArg = args.find((a) => a.startsWith("--urun="))
-  const tekUrun = tekArg ? tekArg.split("=")[1] : null
+  const argDizi = Array.isArray(args) ? args : []
+  logger.info("[boya-renk] gelen args: " + JSON.stringify(argDizi) + " | env BOYA_MOD=" + (process.env.BOYA_MOD || "-") + " BOYA_URUN=" + (process.env.BOYA_URUN || "-"))
+
+  const kuru = argDizi.includes("--kuru") || process.env.BOYA_MOD === "kuru"
+  const hepsi = argDizi.includes("--hepsi") || process.env.BOYA_MOD === "hepsi"
+  const tekArg = argDizi.find((a) => a.startsWith("--urun="))
+  const tekUrun = tekArg ? tekArg.split("=")[1] : (process.env.BOYA_URUN || null)
 
   if (!kuru && !hepsi && !tekUrun) {
     logger.error("[boya-renk] --kuru, --urun=<handle> veya --hepsi vermelisin.")
