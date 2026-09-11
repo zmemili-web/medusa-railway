@@ -30,9 +30,20 @@ const AMBALAJ_BASLIK = /ambalaj|boy|\u00f6l\u00e7\u00fc|hacim|litre/i
 
 function esle(s: string) {
   return String(s || "")
-    .toLocaleUpperCase("tr")
-    .replace(/\s+/g, " ")
-    .trim()
+    .replace(/\u0130/g, "I")
+    .replace(/\u0131/g, "i")
+    .replace(/\u015e/g, "S")
+    .replace(/\u015f/g, "s")
+    .replace(/\u011e/g, "G")
+    .replace(/\u011f/g, "g")
+    .replace(/\u00dc/g, "U")
+    .replace(/\u00fc/g, "u")
+    .replace(/\u00d6/g, "O")
+    .replace(/\u00f6/g, "o")
+    .replace(/\u00c7/g, "C")
+    .replace(/\u00e7/g, "c")
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, "")
 }
 
 function slug(s: string) {
@@ -68,8 +79,11 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     return
   }
 
+  const hedefListe = tekUrun
+    ? tekUrun.split(",").map((x) => x.trim()).filter(Boolean)
+    : null
   const kayitlar = (veri as UrunKaydi[]).filter((k) =>
-    tekUrun ? k.urun === tekUrun : true
+    hedefListe ? hedefListe.includes(k.urun) : true
   )
 
   logger.info(
@@ -251,7 +265,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     const yeniVaryantlar = eksikVaryantlar.map((e) => {
       const fiyatlar = ambalajFiyat.get(e.ambalaj) || []
       return {
-        title: `${yazim(e.renk.ad)} / ${e.ambalaj}`,
+        title: `${e.ambalaj} / ${yazim(e.renk.ad)}`,
         options: {
           [renkOpt.title]: yazim(e.renk.ad),
           [ambalajOpt.title]: e.ambalaj,
@@ -259,7 +273,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
         prices: fiyatlar,
         manage_inventory: false,
         metadata: gorselUrl.has(e.renk.ad)
-          ? { thumbnail: gorselUrl.get(e.renk.ad) }
+          ? { renk_gorseli: gorselUrl.get(e.renk.ad) }
           : {},
       }
     })
