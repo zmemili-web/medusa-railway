@@ -87,6 +87,22 @@ export default async function orderPlacedHandler({
       })
       .join("")
 
+  const ULKE_ADLARI: Record<string, string> = { tr: "Türkiye" }
+  const ulkeAdi = (kod?: string | null): string => {
+    if (!kod) return ""
+    const k = String(kod).toLowerCase()
+    if (ULKE_ADLARI[k]) return ULKE_ADLARI[k]
+    try {
+      return (
+        new Intl.DisplayNames(["tr"], { type: "region" }).of(
+          String(kod).toUpperCase()
+        ) || String(kod).toUpperCase()
+      )
+    } catch {
+      return String(kod).toUpperCase()
+    }
+  }
+
     const a = order.shipping_address
     const addressHtml = a
       ? [
@@ -96,6 +112,7 @@ export default async function orderPlacedHandler({
           `${esc(a.postal_code)} ${esc(a.city)}${
             a.province ? " / " + esc(a.province) : ""
           }`.trim(),
+          esc(ulkeAdi(a.country_code)),
           a.phone ? "Tel: " + esc(a.phone) : "",
         ]
           .filter(Boolean)
