@@ -58,11 +58,12 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
   logger.info("[boya-renk] gelen args: " + JSON.stringify(argDizi) + " | env BOYA_MOD=" + (process.env.BOYA_MOD || "-") + " BOYA_URUN=" + (process.env.BOYA_URUN || "-"))
 
   const kuru = argDizi.includes("--kuru") || process.env.BOYA_MOD === "kuru"
+  const rapor = argDizi.includes("--rapor") || process.env.BOYA_MOD === "rapor"
   const hepsi = argDizi.includes("--hepsi") || process.env.BOYA_MOD === "hepsi"
   const tekArg = argDizi.find((a) => a.startsWith("--urun="))
   const tekUrun = tekArg ? tekArg.split("=")[1] : (process.env.BOYA_URUN || null)
 
-  if (!kuru && !hepsi && !tekUrun) {
+  if (!kuru && !rapor && !hepsi && !tekUrun) {
     logger.error("[boya-renk] --kuru, --urun=<handle> veya --hepsi vermelisin.")
     return
   }
@@ -171,6 +172,20 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     logger.info(
       `[boya-renk] ${kayit.urun}: ${kayit.renkler.length} renk, ${ambalajlar.length} ambalaj | yeni renk ${yeniRenkler.length}, eksik varyant ${eksikVaryantlar.length}`
     )
+
+    if (rapor) {
+      const bizde = Array.from(mevcutRenkHarita.values())
+      const tedSet = new Set(kayit.renkler.map((r) => esle(r.ad)))
+      const sadeceBizde = bizde.filter((b) => !tedSet.has(esle(b)))
+      logger.info(
+        "[rapor] " +
+          kayit.urun +
+          " || BIZDE(" + bizde.length + "): " + bizde.join(", ") +
+          " || YENI(" + yeniRenkler.length + "): " + yeniRenkler.map((r) => r.ad).join(", ") +
+          " || SADECE-BIZDE(" + sadeceBizde.length + "): " + sadeceBizde.join(", ")
+      )
+      continue
+    }
 
     toplamYeniRenk += yeniRenkler.length
     toplamYeniVaryant += eksikVaryantlar.length
