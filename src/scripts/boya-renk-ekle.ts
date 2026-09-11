@@ -28,6 +28,13 @@ type UrunKaydi = { urun: string; renkler: RenkKaydi[] }
 const RENK_BASLIK = /renk|color/i
 const AMBALAJ_BASLIK = /ambalaj|boy|\u00f6l\u00e7\u00fc|hacim|litre/i
 
+function esle(s: string) {
+  return String(s || "")
+    .toLocaleUpperCase("tr")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
 function slug(s: string) {
   return s
     .toLowerCase()
@@ -116,12 +123,19 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
       continue
     }
 
-    const mevcutRenkler = new Set(
-      (renkOpt.values || []).map((v: any) => String(v.value))
-    )
+    // normalize edilmis anahtar -> Medusa'daki gercek yazim
+    const mevcutRenkHarita = new Map<string, string>()
+    for (const v of renkOpt.values || []) {
+      mevcutRenkHarita.set(esle(String(v.value)), String(v.value))
+    }
     const ambalajlar = (ambalajOpt.values || []).map((v: any) => String(v.value))
 
-    const yeniRenkler = kayit.renkler.filter((r) => !mevcutRenkler.has(r.ad))
+    const yeniRenkler = kayit.renkler.filter(
+      (r) => !mevcutRenkHarita.has(esle(r.ad))
+    )
+
+    // her renk icin Medusa'da kullanilacak nihai yazim
+    const yazim = (ad: string) => mevcutRenkHarita.get(esle(ad)) || ad
 
     // mevcut varyantlari renk|ambalaj anahtariyla haritala
     const varAnahtar = new Set<string>()
@@ -133,7 +147,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
       const ambDeg = (v.options || []).find(
         (o: any) => o.option_id === ambalajOpt.id
       )?.value
-      if (renkDeg && ambDeg) varAnahtar.add(renkDeg + "|" + ambDeg)
+      if (renkDeg && ambDeg) varAnahtar.add(esle(renkDeg) + "|" + esle(ambDeg))
       if (ambDeg && !ambalajFiyat.has(ambDeg)) {
         ambalajFiyat.set(
           ambDeg,
@@ -148,7 +162,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     const eksikVaryantlar: { renk: RenkKaydi; ambalaj: string }[] = []
     for (const r of kayit.renkler) {
       for (const a of ambalajlar) {
-        if (!varAnahtar.has(r.ad + "|" + a)) {
+        if (!varAnahtar.has(esle(r.ad) + "|" + esle(a))) {
           eksikVaryantlar.push({ renk: r, ambalaj: a })
         }
       }
@@ -222,9 +236,9 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     const yeniVaryantlar = eksikVaryantlar.map((e) => {
       const fiyatlar = ambalajFiyat.get(e.ambalaj) || []
       return {
-        title: `${e.renk.ad} / ${e.ambalaj}`,
+        title: `${yazim(e.renk.ad)} / ${e.ambalaj}`,
         options: {
-          [renkOpt.title]: e.renk.ad,
+          [renkOpt.title]: yazim(e.renk.ad),
           [ambalajOpt.title]: e.ambalaj,
         },
         prices: fiyatlar,
