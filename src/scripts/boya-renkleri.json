@@ -1,0 +1,927 @@
+[
+  {
+    "urun": "hickson-decor-ultra-wood-stain",
+    "renkler": [
+      {
+        "ad": "TEAK",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-teak-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-969-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-teak-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-969-26-O.jpg"
+      },
+      {
+        "ad": "AFRORMOSIA",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-afrormosia-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1104-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-afrormosia-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1104-24-O.jpg"
+      },
+      {
+        "ad": "AKAJOU",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-akajou-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1106-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-akajou-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1106-24-O.jpg"
+      },
+      {
+        "ad": "ANTIQUE PINE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-antique-pine-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-980-21-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-antique-pine-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-980-21-O.jpg"
+      },
+      {
+        "ad": "BALTIC",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-baltic-ahsap-vernik-3-hickson-decor-ultra-wood-stain-hickson-decor-1109-33-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-baltic-ahsap-vernik-3-hickson-decor-ultra-wood-stain-hickson-decor-1109-33-O.jpg"
+      },
+      {
+        "ad": "BURMA",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-burma-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-978-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-burma-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-978-24-O.jpg"
+      },
+      {
+        "ad": "CALIF",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-calif-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-977-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-calif-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-977-25-O.jpg"
+      },
+      {
+        "ad": "CHESTNUT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-chestnut-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-976-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-chestnut-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-976-25-O.jpg"
+      },
+      {
+        "ad": "CREOL",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-creol-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-975-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-creol-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-975-25-O.jpg"
+      },
+      {
+        "ad": "DARK",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-dark-ahsap-vernik-9-hickson-decor-ultra-wood-stain-hickson-decor-1103-48-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-dark-ahsap-vernik-9-hickson-decor-ultra-wood-stain-hickson-decor-1103-48-O.jpg"
+      },
+      {
+        "ad": "EBON",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-ebon-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-965-48-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-ebon-renkli-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-965-48-O.jpg"
+      },
+      {
+        "ad": "JADE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-jade-ahsap-vernik-4-hickson-decor-ultra-wood-stain-hickson-decor-974-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-jade-ahsap-vernik-4-hickson-decor-ultra-wood-stain-hickson-decor-974-25-O.jpg"
+      },
+      {
+        "ad": "LIGHT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-light-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-973-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-light-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-973-25-O.jpg"
+      },
+      {
+        "ad": "MAHOG",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-mahog-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1111-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-mahog-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1111-25-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-natural-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-972-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-natural-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-972-25-O.jpg"
+      },
+      {
+        "ad": "OCEAN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-ocean-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1112-25-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-ocean-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-1112-25-O.jpg"
+      },
+      {
+        "ad": "OLIVE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-olive-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-971-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-olive-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-971-26-O.jpg"
+      },
+      {
+        "ad": "ROSEWOOD",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-rosewood-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-970-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-rosewood-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-970-26-O.jpg"
+      },
+      {
+        "ad": "TANALITH GREEN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-tanalith-green-ahsap-vernik-hickson-decor-ultra-wood-stain-hickson-decor-981-21-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-tanalith-green-ahsap-vernik-hickson-decor-ultra-wood-stain-hickson-decor-981-21-O.jpg"
+      },
+      {
+        "ad": "TANATONE BROWN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-tanatone-brown-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-979-22-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-tanatone-brown-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-979-22-O.jpg"
+      },
+      {
+        "ad": "WALNUT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-walnut-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-968-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-walnut-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-968-26-O.jpg"
+      },
+      {
+        "ad": "WARM GREY",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-warm-grey-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-967-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-warm-grey-ahsap-vernik-1-hickson-decor-ultra-wood-stain-hickson-decor-967-26-O.jpg"
+      },
+      {
+        "ad": "WESTERN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-western-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-966-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-western-ahsap-vernik-2-hickson-decor-ultra-wood-stain-hickson-decor-966-26-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hickson-decor-ultra-aqua-wood-stain",
+    "renkler": [
+      {
+        "ad": "TEAK",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-teak-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-987-28-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-teak-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-987-28-O.jpg"
+      },
+      {
+        "ad": "AFRORMOSIA",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-afrormosia-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1105-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-afrormosia-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1105-26-O.jpg"
+      },
+      {
+        "ad": "ANTIQUE PINE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-antique-pine-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-996-22-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-antique-pine-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-996-22-O.jpg"
+      },
+      {
+        "ad": "BALTIC",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-baltic-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1108-33-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-baltic-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1108-33-O.jpg"
+      },
+      {
+        "ad": "BURMA",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-burma-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-993-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-burma-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-993-26-O.jpg"
+      },
+      {
+        "ad": "CALIF",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-calif-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-992-26-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-calif-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-992-26-O.jpg"
+      },
+      {
+        "ad": "CHESTNUT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-chestnut-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-998-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-chestnut-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-998-27-O.jpg"
+      },
+      {
+        "ad": "CREOL",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-creol-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-997-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-creol-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-997-27-O.jpg"
+      },
+      {
+        "ad": "DARK",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-dark-ahsap-vernik-277-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1102-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-dark-ahsap-vernik-277-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1102-27-O.jpg"
+      },
+      {
+        "ad": "EBON",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-ebon-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-991-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-ebon-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-991-27-O.jpg"
+      },
+      {
+        "ad": "JADE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-jade-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-990-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-wood-stain-jade-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-990-27-O.jpg"
+      },
+      {
+        "ad": "LIGHT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-light-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-989-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-light-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-989-27-O.jpg"
+      },
+      {
+        "ad": "MAHOG",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-mahog-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1110-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-mahog-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1110-27-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-natural-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-983-43-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-natural-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-983-43-O.jpg"
+      },
+      {
+        "ad": "OCEAN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-ocean-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1113-27-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-ocean-ahsap-vernik-2-hickson-decor-ultra-aqua-wood-stain-hickson-decor-1113-27-O.jpg"
+      },
+      {
+        "ad": "OLIVE",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-olive-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-982-43-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-olive-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-982-43-O.jpg"
+      },
+      {
+        "ad": "ROSEWOOD",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-rosewood-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-988-28-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-rosewood-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-988-28-O.jpg"
+      },
+      {
+        "ad": "TANALITH GREEN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-tanalith-green-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-995-22-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-tanalith-green-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-995-22-O.jpg"
+      },
+      {
+        "ad": "TANATONE BROWN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-tanatone-brown-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-994-22-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-tanatone-brown-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-994-22-O.jpg"
+      },
+      {
+        "ad": "WALNUT",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-walnut-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-986-28-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-walnut-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-986-28-O.jpg"
+      },
+      {
+        "ad": "WARM GREY",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-warm-grey-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-985-28-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-warm-grey-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-985-28-O.jpg"
+      },
+      {
+        "ad": "WESTERN",
+        "swatch": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-western-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-984-28-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-ultra-aqua-wood-stain-western-ahsap-vernik-1-hickson-decor-ultra-aqua-wood-stain-hickson-decor-984-28-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-wood-oil-2c",
+    "renkler": [
+      {
+        "ad": "CASTLE BROWN",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-castle-brown-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1025-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-castle-brown-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1025-24-O.jpg"
+      },
+      {
+        "ad": "BITTER CHOCOLATE",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-bitter-chocolate-ahsap-parke-mobilya-yagi-hemel-wood-oil-2c-hemel-1163-52-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-bitter-chocolate-ahsap-parke-mobilya-yagi-hemel-wood-oil-2c-hemel-1163-52-O.jpg"
+      },
+      {
+        "ad": "BLACK",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-black-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1022-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-black-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1022-30-O.jpg"
+      },
+      {
+        "ad": "CHALK WHITE",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-chalk-white-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1024-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-chalk-white-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1024-24-O.jpg"
+      },
+      {
+        "ad": "CHOCOLATE",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-chocolate-ahsap-parke-mobilya-yagi-2-hemel-wood-oil-2c-hemel-1021-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-chocolate-ahsap-parke-mobilya-yagi-2-hemel-wood-oil-2c-hemel-1021-30-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-seffaf-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1020-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-seffaf-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1020-30-O.jpg"
+      },
+      {
+        "ad": "DARK OAK",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-dark-oak-ahsap-yagi-1-hemel-wood-oil-2c-hemel-1026-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-dark-oak-ahsap-yagi-1-hemel-wood-oil-2c-hemel-1026-30-O.jpg"
+      },
+      {
+        "ad": "ENGLISH COLOR",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-english-color-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1015-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-english-color-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1015-24-O.jpg"
+      },
+      {
+        "ad": "MAHOGANY",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-mahogany-ahsap-yagi-1-hemel-wood-oil-2c-hemel-1019-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-mahogany-ahsap-yagi-1-hemel-wood-oil-2c-hemel-1019-30-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-natural-ahsap-parke-mobilya-yagi-hemel-wood-oil-2c-hemel-1018-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-natural-ahsap-parke-mobilya-yagi-hemel-wood-oil-2c-hemel-1018-30-O.jpg"
+      },
+      {
+        "ad": "OAK",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-oak-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1159-52-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-oak-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1159-52-O.jpg"
+      },
+      {
+        "ad": "SLATE GREY",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-slate-grey-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1155-52-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-slate-grey-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1155-52-O.jpg"
+      },
+      {
+        "ad": "SUPER WHITE",
+        "swatch": "https://hemel.com.tr/hemel-wood-oil-super-white-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1023-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-wood-oil-super-white-ahsap-parke-mobilya-yagi-1-hemel-wood-oil-2c-hemel-1023-24-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-primetex",
+    "renkler": [
+      {
+        "ad": "AÇIK MEŞE",
+        "swatch": "https://hemel.com.tr/primetex-acik-mese-1-primetex-prime-1284-57-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-acik-mese-1-primetex-prime-1284-57-O.jpg"
+      },
+      {
+        "ad": "BURMA",
+        "swatch": "https://hemel.com.tr/httpshemelcomtrprimetex-burma-1-primetex-prime-1280-57-K.jpg",
+        "buyuk": "https://hemel.com.tr/httpshemelcomtrprimetex-burma-1-primetex-prime-1280-57-O.jpg"
+      },
+      {
+        "ad": "CEVİZ",
+        "swatch": "https://hemel.com.tr/primetex-ceviz-1-primetex-prime-1276-57-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-ceviz-1-primetex-prime-1276-57-O.jpg"
+      },
+      {
+        "ad": "KESTANE",
+        "swatch": "https://hemel.com.tr/primetex-kestane-1-primetex-prime-1272-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-kestane-1-primetex-prime-1272-58-O.jpg"
+      },
+      {
+        "ad": "KOYU CEVİZ",
+        "swatch": "https://hemel.com.tr/primetex-koyu-ceviz-1-primetex-prime-1268-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-koyu-ceviz-1-primetex-prime-1268-58-O.jpg"
+      },
+      {
+        "ad": "KOYU MEŞE",
+        "swatch": "https://hemel.com.tr/primetex-koyu-mese-1-primetex-prime-1260-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-koyu-mese-1-primetex-prime-1260-58-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/primetex-seffaf-1-primetex-prime-1264-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-seffaf-1-primetex-prime-1264-58-O.jpg"
+      },
+      {
+        "ad": "TİK",
+        "swatch": "https://hemel.com.tr/primetex-tik-1-primetex-prime-1256-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-tik-1-primetex-prime-1256-58-O.jpg"
+      },
+      {
+        "ad": "YEŞİL",
+        "swatch": "https://hemel.com.tr/primetex-yesil-3-primetex-prime-1254-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/primetex-yesil-3-primetex-prime-1254-58-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hickson-decor-aqua-breather-paint",
+    "renkler": [
+      {
+        "ad": "DEEP SKY BLUE",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-deep-sky-blue-ahsap-boyasi-1-hickson-decor-aqua-breather-paint-hickson-decor-65-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-deep-sky-blue-ahsap-boyasi-1-hickson-decor-aqua-breather-paint-hickson-decor-65-31-O.jpg"
+      },
+      {
+        "ad": "ANTHRACITE GREY",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-antrasit-gri-ahsap-boyasi-2-hickson-decor-aqua-breather-paint-hickson-decor-956-49-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-antrasit-gri-ahsap-boyasi-2-hickson-decor-aqua-breather-paint-hickson-decor-956-49-O.jpg"
+      },
+      {
+        "ad": "POLAR WHITE PARLAK",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-polar-white-parlak-ahsap-boyasi-3-hickson-decor-aqua-breather-paint-hickson-decor-767-43-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-polar-white-parlak-ahsap-boyasi-3-hickson-decor-aqua-breather-paint-hickson-decor-767-43-O.jpg"
+      },
+      {
+        "ad": "POLAR WHITE MAT",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-breather-wood-paint-polar-white-semi-gloss-2-hickson-decor-aqua-breather-paint-hickson-decor-768-33-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-breather-wood-paint-polar-white-semi-gloss-2-hickson-decor-aqua-breather-paint-hickson-decor-768-33-O.jpg"
+      },
+      {
+        "ad": "SIENNA (AŞI RENGİ)",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-sienna-asi-rengi-ahsap-boyasi-hickson-decor-aqua-breather-paint-hickson-decor-637-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-breather-paint-sienna-asi-rengi-ahsap-boyasi-hickson-decor-aqua-breather-paint-hickson-decor-637-36-O.jpg"
+      },
+      {
+        "ad": "UNIVERSAL PRIMER",
+        "swatch": "https://hemel.com.tr/hickson-decor-universal-primer-ortucu-opak-ahsap-astari-tr-2-hickson-decor-aqua-universal-primer-hickson-decor-870-46-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-universal-primer-ortucu-opak-ahsap-astari-tr-2-hickson-decor-aqua-universal-primer-hickson-decor-870-46-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-rapid-oil",
+    "renkler": [
+      {
+        "ad": "WHITE",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-rapid-oil-white-5-hemel-rapid-oil-hemel-1085-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-rapid-oil-white-5-hemel-rapid-oil-hemel-1085-51-O.jpg"
+      },
+      {
+        "ad": "BLACK",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-black-1-hemel-rapid-oil-hemel-1099-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-black-1-hemel-rapid-oil-hemel-1099-50-O.jpg"
+      },
+      {
+        "ad": "BROWN",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-brown-3-hemel-rapid-oil-hemel-1097-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-brown-3-hemel-rapid-oil-hemel-1097-50-O.jpg"
+      },
+      {
+        "ad": "COFFEE",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-coffee-2-hemel-rapid-oil-hemel-1095-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-coffee-2-hemel-rapid-oil-hemel-1095-50-O.jpg"
+      },
+      {
+        "ad": "GRAY",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-gray-3-hemel-rapid-oil-hemel-1101-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-gray-3-hemel-rapid-oil-hemel-1101-50-O.jpg"
+      },
+      {
+        "ad": "MAPLE",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-maple-2-hemel-rapid-oil-hemel-1093-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-maple-2-hemel-rapid-oil-hemel-1093-50-O.jpg"
+      },
+      {
+        "ad": "SMOKED OAK",
+        "swatch": "https://hemel.com.tr/httpswwwhemelcomtrhemel-ic-dis-mekan-solvent-ahsap-yag-smoked-oak-2-hemel-rapid-oil-hemel-1091-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/httpswwwhemelcomtrhemel-ic-dis-mekan-solvent-ahsap-yag-smoked-oak-2-hemel-rapid-oil-hemel-1091-50-O.jpg"
+      },
+      {
+        "ad": "TEAK",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-teak-2-hemel-rapid-oil-hemel-1089-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-teak-2-hemel-rapid-oil-hemel-1089-50-O.jpg"
+      },
+      {
+        "ad": "WALNUT",
+        "swatch": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-walnut-3-hemel-rapid-oil-hemel-1087-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-ic-dis-mekan-solvent-ahsap-yag-walnut-3-hemel-rapid-oil-hemel-1087-51-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-deck-yagi",
+    "renkler": [
+      {
+        "ad": "CEVİZ",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-ceviz-2-prime-deck-yagi-prime-1081-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-ceviz-2-prime-deck-yagi-prime-1081-50-O.jpg"
+      },
+      {
+        "ad": "NATÜREL",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-naturel-4-prime-deck-yagi-prime-1082-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-naturel-4-prime-deck-yagi-prime-1082-50-O.jpg"
+      },
+      {
+        "ad": "TİK",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-tik-5-prime-deck-yagi-prime-1083-50-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-tik-5-prime-deck-yagi-prime-1083-50-O.jpg"
+      },
+      {
+        "ad": "AÇIK CEVİZ",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-acik-ceviz-3-prime-deck-yagi-prime-1318-56-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-acik-ceviz-3-prime-deck-yagi-prime-1318-56-O.jpg"
+      },
+      {
+        "ad": "ÇAM",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-cam-3-prime-deck-yagi-prime-1316-56-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-cam-3-prime-deck-yagi-prime-1316-56-O.jpg"
+      },
+      {
+        "ad": "HARDAL",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-hardal-1-prime-deck-yagi-prime-1315-56-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-hardal-1-prime-deck-yagi-prime-1315-56-O.jpg"
+      },
+      {
+        "ad": "AÇIK MEŞE",
+        "swatch": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-acik-mese-1-prime-deck-yagi-prime-1317-56-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-deck-bahce-mobilyalari-su-bazli-hybrid-yag-acik-mese-1-prime-deck-yagi-prime-1317-56-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hickson-decor-aqua-decorative-colorant",
+    "renkler": [
+      {
+        "ad": "HD 2011",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2011-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1033-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2011-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1033-36-O.jpg"
+      },
+      {
+        "ad": "HD 2012",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2012-2-hickson-decor-aqua-decorative-colorant-hickson-decor-626-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2012-2-hickson-decor-aqua-decorative-colorant-hickson-decor-626-36-O.jpg"
+      },
+      {
+        "ad": "HD 2013",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2013-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1032-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2013-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1032-36-O.jpg"
+      },
+      {
+        "ad": "HD 2014",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2014-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1294-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2014-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1294-36-O.jpg"
+      },
+      {
+        "ad": "HD 2018",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2018-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1169-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2018-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1169-51-O.jpg"
+      },
+      {
+        "ad": "HD 2019",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2019-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1031-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2019-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1031-45-O.jpg"
+      },
+      {
+        "ad": "HD 2022",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2022-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1029-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2022-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1029-37-O.jpg"
+      },
+      {
+        "ad": "HD 2024",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2024-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1166-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2024-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1166-51-O.jpg"
+      },
+      {
+        "ad": "HD 2026",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2026-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1028-47-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2026-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1028-47-O.jpg"
+      },
+      {
+        "ad": "HD 2033",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2033-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1027-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2033-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1027-37-O.jpg"
+      },
+      {
+        "ad": "HD 2046",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2046-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1172-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2046-tr-2-hickson-decor-aqua-decorative-colorant-hickson-decor-1172-51-O.jpg"
+      },
+      {
+        "ad": "HD 2060",
+        "swatch": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2060-tr-4-hickson-decor-aqua-decorative-colorant-hickson-decor-1175-51-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-aqua-colorant-dekoratif-ahsap-renklendirici-hd-2060-tr-4-hickson-decor-aqua-decorative-colorant-hickson-decor-1175-51-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-hardwax-oil",
+    "renkler": [
+      {
+        "ad": "CHOCOLATE",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-chocolate-ahsap-yagi1-hemel-hardwax-oil-hemel-1008-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-chocolate-ahsap-yagi1-hemel-hardwax-oil-hemel-1008-37-O.jpg"
+      },
+      {
+        "ad": "CASTLE BROWN",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-csatle-brown-ahsap-yagi1-hemel-hardwax-oil-hemel-1004-47-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-csatle-brown-ahsap-yagi1-hemel-hardwax-oil-hemel-1004-47-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-clear-ahsap-yagi1-hemel-hardwax-oil-hemel-1009-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-clear-ahsap-yagi1-hemel-hardwax-oil-hemel-1009-37-O.jpg"
+      },
+      {
+        "ad": "DARK OAK",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-dark-oak-ahsap-yagi1-hemel-hardwax-oil-hemel-1007-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-dark-oak-ahsap-yagi1-hemel-hardwax-oil-hemel-1007-37-O.jpg"
+      },
+      {
+        "ad": "ENGLISH COLOR",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-english-color-ahsap-yagi1-hemel-hardwax-oil-hemel-1016-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-english-color-ahsap-yagi1-hemel-hardwax-oil-hemel-1016-37-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/hemel-hardwax-oil-natural-ahsap-yagi1-hemel-hardwax-oil-hemel-1017-38-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hardwax-oil-natural-ahsap-yagi1-hemel-hardwax-oil-hemel-1017-38-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-panel-door-paint",
+    "renkler": [
+      {
+        "ad": "KREM",
+        "swatch": "https://hemel.com.tr/hemel-panel-door-paint-krem-panel-kapi-boyasi-tr1-hemel-panel-door-paint-hemel-1320-58-K.png",
+        "buyuk": "https://hemel.com.tr/hemel-panel-door-paint-krem-panel-kapi-boyasi-tr1-hemel-panel-door-paint-hemel-1320-58-O.png"
+      },
+      {
+        "ad": "POLAR WHITE",
+        "swatch": "https://hemel.com.tr/hemel-panel-door-paint-deniz-kabugu-panel-kapi-boyasi-tr1-hemel-panel-door-paint-hemel-79-23-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-panel-door-paint-deniz-kabugu-panel-kapi-boyasi-tr1-hemel-panel-door-paint-hemel-79-23-O.jpg"
+      },
+      {
+        "ad": "DENİZ KABUĞU",
+        "swatch": "https://hemel.com.tr/hemel-panel-door-paint-polar-white-panel-kapi-boyasi-tr1-hemel-panel-door-paint-1319-58-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-panel-door-paint-polar-white-panel-kapi-boyasi-tr1-hemel-panel-door-paint-1319-58-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-parke-vernigi-2k",
+    "renkler": [
+      {
+        "ad": "PARLAK",
+        "swatch": "https://hemel.com.tr/pirme-parke-2k-parlak-1-prime-parke-vernigi-2k-1361-61-K.webp",
+        "buyuk": "https://hemel.com.tr/pirme-parke-2k-parlak-1-prime-parke-vernigi-2k-1361-61-K.webp"
+      },
+      {
+        "ad": "İPEK MAT",
+        "swatch": "https://hemel.com.tr/pirme-parke-2k-ipek-mat-1-prime-parke-vernigi-2k-1356-61-K.png",
+        "buyuk": "https://hemel.com.tr/pirme-parke-2k-ipek-mat-1-prime-parke-vernigi-2k-1356-61-O.png"
+      },
+      {
+        "ad": "MAT",
+        "swatch": "https://hemel.com.tr/pirme-parke-2k-mat-1-prime-parke-vernigi-2k-1360-61-K.png",
+        "buyuk": "https://hemel.com.tr/pirme-parke-2k-mat-1-prime-parke-vernigi-2k-1360-61-O.png"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-home",
+    "renkler": [
+      {
+        "ad": "MAT",
+        "swatch": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-mat-2-hemel-home-hemel-777-34-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-mat-2-hemel-home-hemel-777-34-O.jpg"
+      },
+      {
+        "ad": "İPEK MAT",
+        "swatch": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-ipek-mat-2-hemel-home-hemel-778-34-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-ipek-mat-2-hemel-home-hemel-778-34-O.jpg"
+      },
+      {
+        "ad": "PARLAK",
+        "swatch": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-tr-2-hemel-home-hemel-776-34-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-home-parlak-su-bazli-parke-cilasi-tr-2-hemel-home-hemel-776-34-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-heavy-traffic",
+    "renkler": [
+      {
+        "ad": "İPEK MAT",
+        "swatch": "https://hemel.com.tr/hemel-heavy-traffic-ipek-mat-parke-cilasi-tr-2-hemel-heavy-traffic-hemel-780-34-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-heavy-traffic-ipek-mat-parke-cilasi-tr-2-hemel-heavy-traffic-hemel-780-34-O.jpg"
+      },
+      {
+        "ad": "MAT",
+        "swatch": "https://hemel.com.tr/hemel-heavy-traffic-mat-parke-cilasi-tr-3-hemel-heavy-traffic-hemel-779-34-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-heavy-traffic-mat-parke-cilasi-tr-3-hemel-heavy-traffic-hemel-779-34-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-emprenye",
+    "renkler": [
+      {
+        "ad": "KAHVERENGİ",
+        "swatch": "https://hemel.com.tr/prime-emprenye-kahverengi-1-prime-emprenye-prime-766-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-emprenye-kahverengi-1-prime-emprenye-prime-766-36-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/prime-emprenye-seffaf-1-prime-emprenye-prime-764-37-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-emprenye-seffaf-1-prime-emprenye-prime-764-37-O.jpg"
+      },
+      {
+        "ad": "YEŞİL",
+        "swatch": "https://hemel.com.tr/prime-emprenye-yesil-1-prime-emprenye-prime-765-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-emprenye-yesil-1-prime-emprenye-prime-765-36-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-exotic-oil",
+    "renkler": [
+      {
+        "ad": "BROWN",
+        "swatch": "https://hemel.com.tr/hemel-exotic-oil-brown-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1013-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-exotic-oil-brown-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1013-29-O.jpg"
+      },
+      {
+        "ad": "HAZELNUT",
+        "swatch": "https://hemel.com.tr/hemel-exotic-oil-hazelnut-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1012-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-exotic-oil-hazelnut-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1012-29-O.jpg"
+      },
+      {
+        "ad": "MUSTARD",
+        "swatch": "https://hemel.com.tr/hemel-exotic-oil-mustard-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1011-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-exotic-oil-mustard-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1011-29-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/hemel-exotic-oil-natural-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1010-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-exotic-oil-natural-egzotik-ahsap-yagi-1-hemel-exotic-oil-hemel-1010-29-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-hybrid-oil",
+    "renkler": [
+      {
+        "ad": "MUSTARD",
+        "swatch": "https://hemel.com.tr/hemel-hybrid-oil-su-bazli-yag-mustard-2-hemel-hybrid-oil-hemel-1127-48-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-hybrid-oil-su-bazli-yag-mustard-2-hemel-hybrid-oil-hemel-1127-48-O.jpg"
+      },
+      {
+        "ad": "NATURAL",
+        "swatch": "https://hemel.com.tr/httpswwwhemelcomtrhemel-hybrid-oil-su-bazli-yag-natural-2-hemel-hybrid-oil-hemel-1128-48-K.jpg",
+        "buyuk": "https://hemel.com.tr/httpswwwhemelcomtrhemel-hybrid-oil-su-bazli-yag-natural-2-hemel-hybrid-oil-hemel-1128-48-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hemel-deck-stain",
+    "renkler": [
+      {
+        "ad": "ANTIQUE PINE",
+        "swatch": "https://hemel.com.tr/hemel-deck-stain-white-vernik-7-hemel-deck-stain-hemel-86-24-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-deck-stain-white-vernik-7-hemel-deck-stain-hemel-86-24-O.jpg"
+      },
+      {
+        "ad": "LIGHT",
+        "swatch": "https://hemel.com.tr/hemel-deck-stain-white-vernik-6-hemel-deck-stain-hemel-87-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-deck-stain-white-vernik-6-hemel-deck-stain-hemel-87-29-O.jpg"
+      },
+      {
+        "ad": "TEAK",
+        "swatch": "https://hemel.com.tr/hemel-deck-stain-teak-vernik-1-hemel-deck-stain-hemel-774-29-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-deck-stain-teak-vernik-1-hemel-deck-stain-hemel-774-29-O.jpg"
+      },
+      {
+        "ad": "WHITE",
+        "swatch": "https://hemel.com.tr/hemel-deck-stain-white-vernik-5-hemel-deck-stain-hemel-654-40-K.jpg",
+        "buyuk": "https://hemel.com.tr/hemel-deck-stain-white-vernik-5-hemel-deck-stain-hemel-654-40-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "hickson-decor-breather-paint",
+    "renkler": [
+      {
+        "ad": "POLAR WHITE PARLAK",
+        "swatch": "https://hemel.com.tr/hickson-decor-breather-paint-polar-white-parlak-ahsap-boyasi-2-hickson-decor-breather-paint-hickson-decor-770-33-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-breather-paint-polar-white-parlak-ahsap-boyasi-2-hickson-decor-breather-paint-hickson-decor-770-33-O.jpg"
+      },
+      {
+        "ad": "POLAR WHITE MAT",
+        "swatch": "https://hemel.com.tr/hickson-decor-breather-paint-polar-white-sg-ahsap-boyasi-1-hickson-decor-breather-paint-hickson-decor-769-33-K.jpg",
+        "buyuk": "https://hemel.com.tr/hickson-decor-breather-paint-polar-white-sg-ahsap-boyasi-1-hickson-decor-breather-paint-hickson-decor-769-33-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-su-bazli-renkli-vernik",
+    "renkler": [
+      {
+        "ad": "BAL",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-bal-prime-su-bazli-vernik-prime-1041-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-bal-prime-su-bazli-vernik-prime-1041-30-O.jpg"
+      },
+      {
+        "ad": "BEYAZ",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-beyaz-prime-su-bazli-ahsap-boyasi-prime-1040-30-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-beyaz-prime-su-bazli-ahsap-boyasi-prime-1040-30-O.jpg"
+      },
+      {
+        "ad": "BURMA",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-burma-prime-su-bazli-vernik-prime-1039-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-burma-prime-su-bazli-vernik-prime-1039-31-O.jpg"
+      },
+      {
+        "ad": "CEVİZ",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-ceviz-prime-su-bazli-vernik-prime-1038-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-ceviz-prime-su-bazli-vernik-prime-1038-31-O.jpg"
+      },
+      {
+        "ad": "ÇAM",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-cam-prime-su-bazli-vernik-prime-1037-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-cam-prime-su-bazli-vernik-prime-1037-31-O.jpg"
+      },
+      {
+        "ad": "FINDIK",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-findik-prime-su-bazli-vernik-prime-1036-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-renkli-ahsap-vernik-findik-prime-su-bazli-vernik-prime-1036-31-O.jpg"
+      },
+      {
+        "ad": "NATÜREL",
+        "swatch": "https://hemel.com.tr/prime-naturel-su-bazli-renkli-ahsap-vernik-prime-su-bazli-vernik-prime-1042-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-naturel-su-bazli-renkli-ahsap-vernik-prime-su-bazli-vernik-prime-1042-31-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/prime-bal-su-bazli-renkli-ahsap-vernik-seffaf-prime-su-bazli-vernik-prime-1035-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-bal-su-bazli-renkli-ahsap-vernik-seffaf-prime-su-bazli-vernik-prime-1035-31-O.jpg"
+      },
+      {
+        "ad": "TİK",
+        "swatch": "https://hemel.com.tr/prime-bal-su-bazli-renkli-ahsap-vernik-tr-prime-su-bazli-vernik-prime-1034-31-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-bal-su-bazli-renkli-ahsap-vernik-tr-prime-su-bazli-vernik-prime-1034-31-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-solvent-bazli-renkli-vernik",
+    "renkler": [
+      {
+        "ad": "BAL",
+        "swatch": "https://hemel.com.tr/prime-bal-solvent-bazli-renkli-ahsap-vernik-prime-solvent-bazli-vernik-prime-1043-44-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-bal-solvent-bazli-renkli-ahsap-vernik-prime-solvent-bazli-vernik-prime-1043-44-O.jpg"
+      },
+      {
+        "ad": "BEYAZ (OPAK)",
+        "swatch": "https://hemel.com.tr/prime-beyaz-solvent-bazli-ortucu-opak-ahsap-boyasi-tr-prime-solvent-bazli-ahsap-boyasi-prime-1051-47-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-beyaz-solvent-bazli-ortucu-opak-ahsap-boyasi-tr-prime-solvent-bazli-ahsap-boyasi-prime-1051-47-O.jpg"
+      },
+      {
+        "ad": "BURMA",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-burma-prime-solvent-bazli-vernik-prime-1044-44-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-burma-prime-solvent-bazli-vernik-prime-1044-44-O.jpg"
+      },
+      {
+        "ad": "CEVİZ",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-ceviz-prime-solvent-bazli-vernik-prime-1045-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-ceviz-prime-solvent-bazli-vernik-prime-1045-45-O.jpg"
+      },
+      {
+        "ad": "ÇAM",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-cam-prime-solvent-bazli-vernik-prime-1046-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-cam-prime-solvent-bazli-vernik-prime-1046-45-O.jpg"
+      },
+      {
+        "ad": "FINDIK",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-findik-prime-solvent-bazli-vernik-prime-1047-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-findik-prime-solvent-bazli-vernik-prime-1047-45-O.jpg"
+      },
+      {
+        "ad": "NATÜREL",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-naturel-prime-solvent-bazli-vernik-prime-1048-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-naturel-prime-solvent-bazli-vernik-prime-1048-45-O.jpg"
+      },
+      {
+        "ad": "ŞEFFAF",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-seffaf-prime-solvent-bazli-vernik-prime-1049-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-seffaf-prime-solvent-bazli-vernik-prime-1049-45-O.jpg"
+      },
+      {
+        "ad": "TİK",
+        "swatch": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-tr-prime-solvent-bazli-vernik-prime-1050-45-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-tik-solvent-bazli-renkli-ahsap-vernik-tr-prime-solvent-bazli-vernik-prime-1050-45-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-parke-vernigi-1k",
+    "renkler": [
+      {
+        "ad": "PARLAK",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-parlak-prime-parke-cilasi-prime-781-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-parlak-prime-parke-cilasi-prime-781-36-O.jpg"
+      },
+      {
+        "ad": "İPEK MAT",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-ipek-mat-prime-parke-cilasi-prime-782-36-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-ipek-mat-prime-parke-cilasi-prime-782-36-O.jpg"
+      },
+      {
+        "ad": "MAT",
+        "swatch": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-mat-prime-parke-cilasi-prime-1062-49-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-su-bazli-parke-vernigi-mat-prime-parke-cilasi-prime-1062-49-O.jpg"
+      }
+    ]
+  },
+  {
+    "urun": "prime-dekoratif-ahsap-renklendirici",
+    "renkler": [
+      {
+        "ad": "SA 1111 Açık Ceviz",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-acik-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1069-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-acik-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1069-42-O.jpg"
+      },
+      {
+        "ad": "SA 1119 Beyaz",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-beyaz-tr-prime-dekoratif-ahsap-renklendirici-prime-1070-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-beyaz-tr-prime-dekoratif-ahsap-renklendirici-prime-1070-42-O.jpg"
+      },
+      {
+        "ad": "SA 1121 Tik",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-tik-tr-prime-dekoratif-ahsap-renklendirici-prime-1071-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-tik-tr-prime-dekoratif-ahsap-renklendirici-prime-1071-42-O.jpg"
+      },
+      {
+        "ad": "SA 1151 Kestane",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-kestane-tr-prime-dekoratif-ahsap-renklendirici-prime-1068-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-kestane-tr-prime-dekoratif-ahsap-renklendirici-prime-1068-42-O.jpg"
+      },
+      {
+        "ad": "SA 1166 Yeşil",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-yesil-tr-prime-dekoratif-ahsap-renklendirici-prime-1067-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-yesil-tr-prime-dekoratif-ahsap-renklendirici-prime-1067-42-O.jpg"
+      },
+      {
+        "ad": "SA 1184 Sarı Ceviz",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-sari-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1066-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-sari-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1066-42-O.jpg"
+      },
+      {
+        "ad": "SA 1188 Kızıl Ceviz",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-kizil-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1065-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-kizil-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1065-42-O.jpg"
+      },
+      {
+        "ad": "SA 1190 Maun",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-maun-tr-prime-dekoratif-ahsap-renklendirici-prime-1064-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-maun-tr-prime-dekoratif-ahsap-renklendirici-prime-1064-42-O.jpg"
+      },
+      {
+        "ad": "SA 1192 Ceviz",
+        "swatch": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1063-42-K.jpg",
+        "buyuk": "https://hemel.com.tr/prime-dekoratif-ahsap-renklendirici-sa-1192-ceviz-tr-prime-dekoratif-ahsap-renklendirici-prime-1063-42-O.jpg"
+      }
+    ]
+  }
+]
