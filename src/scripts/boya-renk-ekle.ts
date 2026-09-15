@@ -181,6 +181,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
 
     const eksikVaryantlar: { renk: RenkKaydi; ambalaj: string }[] = []
     for (const r of kayit.renkler) {
+      if (DISLANAN.has(esle(r.ad))) continue
       for (const a of ambalajlar) {
         if (!varAnahtar.has(esle(r.ad) + "|" + esle(a))) {
           eksikVaryantlar.push({ renk: r, ambalaj: a })
