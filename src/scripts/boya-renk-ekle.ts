@@ -26,6 +26,8 @@ import veri from "./boya-renkleri.json"
 type RenkKaydi = { ad: string; swatch: string; buyuk: string }
 type UrunKaydi = { urun: string; renkler: RenkKaydi[] }
 
+const DISLANAN = new Set(["UNIVERSALPRIMER"])
+
 const JENERIK = new Set(["TUMRENKLER", "RENKLI", "TUMRENK"])
 
 const RENK_BASLIK = /renk|color/i
@@ -149,7 +151,7 @@ export default async function boyaRenkEkle({ container, args }: ExecArgs) {
     const ambalajlar = (ambalajOpt.values || []).map((v: any) => String(v.value))
 
     const yeniRenkler = kayit.renkler.filter(
-      (r) => !mevcutRenkHarita.has(esle(r.ad))
+      (r) => !mevcutRenkHarita.has(esle(r.ad)) && !DISLANAN.has(esle(r.ad))
     )
 
     // her renk icin Medusa'da kullanilacak nihai yazim
